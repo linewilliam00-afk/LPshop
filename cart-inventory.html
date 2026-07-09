@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | LP Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header1">
+        <div class="logo-area">
+            <a class="brand-link" href="index.html" aria-label="LP Shop home">
+                <span class="brand-mark">LP</span>
+                <span class="brand-text">LP SHOP</span>
+            </a>
+        </div>
+
+        <form class="search-box" role="search">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input type="search" placeholder="Search products..." aria-label="Search products">
+        </form>
+
+        <div class="right-section">
+            <button class="icon-button account-button" type="button" data-open-auth aria-label="Account">Login</button>
+            <a class="cart-button" href="cart-inventory.html" aria-label="Open cart">
+                <span>Cart</span> <span id="cart-count" class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <a id="continue-shopping" class="continue-shopping" href="index.html">&lt; Continue Shopping</a>
+
+        <h1 id="cart-heading">Shopping Cart <span id="cart-title-count">(0 items)</span></h1>
+        <p id="cart-empty" class="cart-empty">Your cart is empty.</p>
+
+        <div id="checkout-steps" class="checkout-steps" hidden>
+            <div class="checkout-step active" data-step="1">
+                <span>1</span>
+                <strong>Cart</strong>
+            </div>
+            <div class="step-line"></div>
+            <div class="checkout-step" data-step="2">
+                <span>2</span>
+                <strong>Delivery</strong>
+            </div>
+            <div class="step-line"></div>
+            <div class="checkout-step" data-step="3">
+                <span>3</span>
+                <strong>Payment</strong>
+            </div>
+            <div class="step-line"></div>
+            <div class="checkout-step" data-step="4">
+                <span>4</span>
+                <strong>Done</strong>
+            </div>
+        </div>
+
+        <div id="cart-layout" class="cart-layout">
+            <section class="cart-list" aria-label="Cart items">
+                <div id="cart-items"></div>
+            </section>
+
+            <aside id="order-summary" class="order-summary" aria-label="Order summary" hidden>
+                <h2>Order Summary</h2>
+                <div class="summary-line">
+                    <span id="summary-subtotal-label">Subtotal (0 items)</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span class="shipping-price">$2.00</span>
+                </div>
+                <div class="summary-total">
+                    <strong>Total</strong>
+                    <strong id="summary-total">$0.00</strong>
+                </div>
+                <button class="checkout-button" type="button">Proceed to Checkout -&gt;</button>
+                <p class="secure-note">Secure checkout - Encrypted payment</p>
+            </aside>
+        </div>
+
+        <section id="checkout-form" class="checkout-form" hidden>
+            <div class="checkout-panel">
+                <h2><span class="form-icon">i</span> Contact Information</h2>
+                <label for="checkout-name">Full Name <span>*</span></label>
+                <input id="checkout-name" type="text" placeholder="Your full name" required>
+
+                <label for="checkout-phone">Phone Number <span>*</span></label>
+                <input id="checkout-phone" type="tel" placeholder="012 345 678" required>
+            </div>
+
+            <div class="delivery-tabs" role="group" aria-label="Delivery method">
+                <button class="delivery-tab active" type="button">Home Delivery</button>
+                <button class="delivery-tab" type="button">Virakbuntam Pickup</button>
+            </div>
+
+            <div class="checkout-panel">
+                <h2><span class="form-icon">p</span> Delivery Address</h2>
+                <label for="checkout-street">Street Address <span>*</span></label>
+                <input id="checkout-street" type="text" placeholder="Street, building, district" required>
+
+                <label for="checkout-city">City / Province <span>*</span></label>
+                <input id="checkout-city" type="text" placeholder="e.g. Phnom Penh" required>
+
+                <button class="map-link" type="button">Pin location on map (optional)</button>
+            </div>
+
+            <div class="checkout-panel">
+                <h2><span class="form-icon">n</span> Order Notes</h2>
+                <textarea id="checkout-notes" rows="4" placeholder="Any special instructions for delivery (optional)"></textarea>
+            </div>
+
+            <p id="checkout-error" class="checkout-error"></p>
+            <button class="checkout-button delivery-checkout-button" type="button">Proceed to Checkout -&gt;</button>
+        </section>
+
+        <section id="payment-section" class="payment-section" hidden>
+            <h1>Choose Payment</h1>
+            <p id="order-number" class="order-number">Order #ORD-22U4EZAD</p>
+
+            <div class="payment-amount-card">
+                <div>
+                    <span>Amount to pay</span>
+                    <strong id="payment-amount">$0.00</strong>
+                </div>
+                <button id="copy-amount" type="button">Copy</button>
+            </div>
+
+            <h2>SELECT PAYMENT METHOD</h2>
+            <button id="payment-method" class="payment-method" type="button">
+                <span class="payment-logo">CARD</span>
+                <span>
+                    <strong>ABA PayWay</strong>
+                    <small>ABA Pay - WeChat Pay - Alipay</small>
+                </span>
+                <span class="payment-arrow">&gt;</span>
+            </button>
+
+            <button id="payment-back" class="payment-back" type="button">&lt;- Back</button>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

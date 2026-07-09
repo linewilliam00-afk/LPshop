@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR001 Smart Bracelet | LP Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header1">
+        <div class="logo-area">
+            <a class="brand-link" href="index.html" aria-label="LP Shop home">
+                <span class="brand-mark">LP</span>
+                <span class="brand-text">LP SHOP</span>
+            </a>
+        </div>
+
+        <form class="search-box" role="search">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input type="search" placeholder="Search products..." aria-label="Search products">
+        </form>
+
+        <div class="right-section">
+            <button class="icon-button account-button" type="button" data-open-auth aria-label="Account">Login</button>
+            <a class="cart-button" href="cart-inventory.html" aria-label="Open cart">
+                <span>Cart</span> <span id="cart-count" class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <section class="product-detail-image product-detail-card" aria-label="Product image">
+            <div class="product-photo-frame product-photo-bracelet">
+                <div class="product-photo-logo">
+                    <strong>LP</strong>
+                    <span>is your lifestyle trends.</span>
+                </div>
+                <p class="product-photo-title">Matching Bracelet</p>
+                <div  aria-hidden="true"><img width="100%" src="images/matching-bracelet.jpg" alt=""></div>
+                <span class="product-code">Code: BR001</span>
+                <p class="product-photo-caption">Style, comfort, and everyday technology</p>
+            </div>
+        </section>
+
+        <section class="product-detail-info product-detail-card">
+            <h1>BR001 Matching Bracelet</h1>
+            <p class="detail-price">$2.50</p>
+            <p class="stock-pill"><span></span> In Stock</p>
+
+            <div class="quantity-row">
+                <span>Qty</span>
+                <div class="quantity-stepper" aria-label="Choose quantity">
+                    <button id="qty-minus" class="quantity-button" type="button" aria-label="Decrease quantity">-</button>
+                    <span id="qty-value">1</span>
+                    <button id="qty-plus" class="quantity-button" type="button" aria-label="Increase quantity">+</button>
+                </div>
+                <strong>= <span id="product-subtotal">$2.50</span></strong>
+            </div>
+
+            <div class="product-actions">
+                <button id="add-to-cart" class="add-to-cart" type="button" data-name="BR001 Matching Bracelet" data-price="2.50" data-image="images/matching-bracelet.jpg">
+                    <span class="button-check" aria-hidden="true"></span>
+                    <span class="button-text">ADD TO CART</span>
+                </button>
+                <button id="buy-now" class="buy-now-button" type="button">Buy Now</button>
+            </div>
+
+            <div class="service-row" aria-label="Shop services">
+                <div class="service-card">
+                    <span class="service-icon">FD</span>
+                    <strong>Fast Delivery</strong>
+                    <span>Quick dispatch</span>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">SP</span>
+                    <strong>Secure Pay</strong>
+                    <span>Encrypted and safe</span>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">ER</span>
+                    <strong>Easy Return</strong>
+                    <span>Hassle-free</span>
+                </div>
+            </div>
+            <div id="cart-popup" class="cart-popup">Added to cart!</div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
